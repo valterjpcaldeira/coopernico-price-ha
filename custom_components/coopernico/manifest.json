@@ -1,0 +1,13 @@
+{
+  "domain": "coopernico",
+  "name": "Coopernico Price",
+  "codeowners": ["@valterjpcaldeira"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/valterjpcaldeira/coopernico-price-ha",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/valterjpcaldeira/coopernico-price-ha/issues",
+  "requirements": ["omie-market-data==0.1.0", "pandas>=2.0.0", "openpyxl>=3.0.0"],
+  "version": "1.0.0"
+}
