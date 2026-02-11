@@ -1,6 +1,7 @@
 """Data update coordinator for Coopernico."""
 from __future__ import annotations
 
+import logging
 from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
@@ -12,6 +13,7 @@ from .const import DOMAIN, UPDATE_INTERVAL
 from .omie_client import CoopernicoOMIEClient
 
 LISBON_TZ = ZoneInfo("Europe/Lisbon")
+_LOGGER = logging.getLogger(__name__)
 
 
 class CoopernicoDataUpdateCoordinator(DataUpdateCoordinator):
@@ -30,7 +32,7 @@ class CoopernicoDataUpdateCoordinator(DataUpdateCoordinator):
 
         super().__init__(
             hass,
-            logger=self.logger,
+            logger=_LOGGER,
             name=DOMAIN,
             update_interval=UPDATE_INTERVAL,
         )
